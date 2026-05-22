@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listing"><i class="fa-solid fa-person-walking-luggage"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <a href="/listing" class="nav-link">Explore</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a href="/listing/new" class="nav-link">Create Listing</a>
+        <% if(!currentUser){ %>
+            <a href="/login" class="nav-link"><b>Login</b></a>
+            <a href="/register" class="nav-link"><b>Register</b></a>
+          <% } else { %>
+            <a href="/logout" class="nav-link"><b>Logout</b></a>
+          <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
