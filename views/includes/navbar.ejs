@@ -10,7 +10,7 @@
       </div>
       <div class="navbar-nav ms-auto">
         <a href="/listing/new" class="nav-link">Create Listing</a>
-        <% if(!currentUser){ %>
+        <% if (typeof currentUser === "undefined" || !currentUser) {%>
             <a href="/login" class="nav-link"><b>Login</b></a>
             <a href="/register" class="nav-link"><b>Register</b></a>
           <% } else { %>
